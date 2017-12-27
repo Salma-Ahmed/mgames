@@ -73,4 +73,4 @@ gulp.task('connect', function () {
     })
 });   
 
-gulp.task('default', ['html', 'copy' ,'js', 'minify-css','compress', 'sass', 'connect' , 'watch']);
+gulp.task('default', ['copy' ,'js', 'minify-css','compress', 'sass','html', 'watch' , 'connect']);
