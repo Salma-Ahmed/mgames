@@ -1,0 +1,128 @@
+header {
+    .top-nav {
+        border-top: 2px solid #868686;
+        border-bottom: 2px solid #fff;
+        background: #212121;
+        padding: 10px 30px 10px 40px;
+        .toggle-btn {
+            width: 40px;
+            height: 30px;
+            display: inline-block;
+            vertical-align: middle;
+            vertical-align: -webkit-baseline-middle;
+            margin-right: 20px;
+            cursor: pointer;
+            span {
+                display: block;
+                background-color: #fff;
+                width: 100%;
+                height: 4px;
+                &:nth-of-type(2) {
+                    margin: 6px 0px;
+                }
+            }
+        }
+        .logo {
+            color: #fff;
+            display: inline-block;
+            font-weight: bold;
+            font-size: 20px;
+            img {
+                vertical-align: middle;
+            }
+        }
+    }
+    .bottom-nav {
+        background-color: #464646;
+        padding: 0px 0px 0px 80px;
+        ul {
+            li {
+                display: inline-block;
+                padding: 20px;
+                a {
+                    color: $main-color;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    font-size: 16px;
+                }
+                &.active {
+                    @include border-bottom($double-width, $style, $green-color);
+                    a {
+                        color: $menu-active;
+                    }
+                }
+            }
+        }
+    }
+    .side-nav {
+        position: fixed;
+        background: #fff;
+        height: 100%;
+        background-color: #fff;
+        color: #fff;
+        width: 0;
+        min-width: 0;
+        overflow-x: hidden;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        -webkit-transition: min-width .3s ease-in-out;
+        -moz-transition: min-width .3s ease-in-out;
+        -o-transition: min-width .3s ease-in-out;
+        transition: min-width .3s ease-in-out;
+        a {
+            color: #000;
+            font-size: 18px;
+            display: inline-block;
+            text-transform: capitalize;
+            font-weight: bold;
+            &.m-title {
+                padding: 20px 0px 20px 20%;
+                width: 100%;
+                display: block;
+                &:first-of-type {
+                    @include border-bottom($width, $style, $main-color);
+                    background: url(../images/login.png) 5% center no-repeat;
+                }
+                &:last-of-type {
+                    background: url(../images/help.png) 5% center no-repeat;
+                }
+            }
+        }
+        ul {
+            padding: 20px 0px 20px 20%;
+            @include border-bottom($width, $style, $main-color);
+            li {
+                padding: 20px 0px;
+            }
+        }
+    }
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .7);
+    z-index: 1;
+    display: none;
+}
+
+@media(max-width: $break-small) {
+    header {
+        .bottom-nav {
+            padding: 0px;
+            ul {
+                text-align: center;
+                li {
+                    padding: 10px;
+                    a {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}

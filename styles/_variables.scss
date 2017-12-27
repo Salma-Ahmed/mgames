@@ -1,0 +1,21 @@
+// variables 
+
+$font: Helvetica, sans-serif;
+$main-color: #c7c7c7;
+$green-color: #bfc642;
+$dark-gray: #212121;
+$menu-active: #fff;
+$break-small: 767px;
+$break-medium: 1024px;
+$width: 2px;
+$double-width: 4px;
+$style: solid;
+
+
+// mixins
+
+// border-bottom
+
+@mixin border-bottom($width,$style,$main-color) {
+    border-bottom: $width $style $main-color;
+}

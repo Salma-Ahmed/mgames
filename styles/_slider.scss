@@ -1,0 +1,45 @@
+.slider {
+    background: $main-color;
+    position: relative;
+    .img-container {
+        width: 950px;
+        margin: 0 auto;
+    }
+    .m-pagination {
+        position: absolute;
+        bottom: 20px;
+        text-align: center;
+        width: 100%;
+        span {
+            display: inline-block;
+            margin: 0px 5px;
+            width: 12px;
+            height: 12px;
+            background-color: #fff;
+            border-radius: 50%;
+            vertical-align: -webkit-baseline-middle;
+            cursor: pointer;
+            border: 1px solid #000;
+            &.active {
+                width: 14px;
+                height: 14px;
+            }
+        }
+    }
+}
+
+@media(max-width: $break-small) {
+    .slider {
+        .img-container {
+            width: 100%;
+        }
+    }
+}
+
+@media(min-width: $break-small) and (max-width: $break-medium) {
+    .slider {
+        .img-container {
+            width: 97%;
+        }
+    }
+}
