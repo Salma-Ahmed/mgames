@@ -1,4 +1,4 @@
-# Getting Started With Gulp
+# Games Categories
 
 Installation Steps:
 
@@ -33,6 +33,6 @@ Used Sass (variables,mixins and nesting) as examples.
 Side nav scripts ==>scripts/scripts.js
 
 
-
+Please make sure to install gulp and run project on localhost:8080
 
 
